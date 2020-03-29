@@ -43,7 +43,7 @@ public class _10 {
                         colSet.add(board[j][i]);
                     }
                 }
-                // 计算九宫格的行列下标
+
                 int r = j/3+i/3*3;
                 int c = (j%3+i*3) % 9;
                 if(cardSet.contains(board[r][(c)])){

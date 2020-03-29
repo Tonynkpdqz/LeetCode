@@ -5,5 +5,6 @@ public class ListNode {
     ListNode next;
     public ListNode(int x) {
         this.val = x;
+        next = null;
     }
 }

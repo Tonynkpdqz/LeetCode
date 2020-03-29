@@ -1,5 +1,8 @@
 package com.nkpdqz.junior.arrray;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class _02 {
 
     public static void main(String[] args) {
@@ -9,6 +12,20 @@ public class _02 {
         System.out.println(maxProfit);
     }
 
+    public int profit(int [] arr){
+        int start = arr[0];
+        int back = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if(arr[i]<start){
+                start = arr[i];
+            }
+            if(arr[i]>back){
+                back = arr[i];
+            }
+        }
+        return back-start;
+
+    }
     public static int maxProfit(int[] prices) {
         int max = 0;
         int k = 0;
@@ -46,6 +63,7 @@ public class _02 {
         }
         return max;
     }
+
 
     public static int Nicer(int[] prices){
         int size = prices.length;
