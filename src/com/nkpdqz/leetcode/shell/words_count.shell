@@ -1,0 +1,2 @@
+#!/bin/bash
+awk '{for(i=1;i<=NF;i++){word_list[$i]++;}};END{for(w in word_list)){print w,word_list[w];}}' words.txt | sort -rn -k2

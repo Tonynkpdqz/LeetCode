@@ -1,0 +1,10 @@
+#!/bin/bash
+# shellcheck disable=SC2034
+row_len=$(cat words.txt | wc -l)
+echo row_len
+# shellcheck disable=SC1035
+if [ $row_len -lt 10 ]; then
+    echo "less than 10 rows"
+else
+    awk '{if(NR==10){print $0;}}' words.txt
+fi
